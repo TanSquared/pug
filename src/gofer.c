@@ -13,6 +13,7 @@
 #include "command.h"
 #include "connect.h"
 #include "errors.h"
+#include "input.h"
 #include <setjmp.h>
 #include <ctype.h>
 
@@ -119,6 +120,7 @@ String argv[]; {
 	    addScriptName(argv[i]);
     everybody(INSTALL);
     everybody(CHANGE_SYNTAX);
+    setup_readline_completion();
     if (proj) {
 	if (namesUpto>1)
 	    fprintf(stderr,

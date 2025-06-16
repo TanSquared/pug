@@ -1,4 +1,4 @@
-/* A Bison parser, made by GNU Bison 3.8.2.  */
+/* A Bison parser, made by GNU Bison 3.7.5.  */
 
 /* Bison implementation for Yacc-like parsers in C
 
@@ -16,7 +16,7 @@
    GNU General Public License for more details.
 
    You should have received a copy of the GNU General Public License
-   along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
+   along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
 /* As a special exception, you may create a larger work that contains
    part or all of the Bison parser skeleton and distribute that work
@@ -46,10 +46,10 @@
    USER NAME SPACE" below.  */
 
 /* Identify Bison output, and Bison version.  */
-#define YYBISON 30802
+#define YYBISON 30705
 
 /* Bison version string.  */
-#define YYBISON_VERSION "3.8.2"
+#define YYBISON_VERSION "3.7.5"
 
 /* Skeleton name.  */
 #define YYSKELETON_NAME "yacc.c"
@@ -284,9 +284,7 @@ typedef int YYSTYPE;
 
 extern YYSTYPE yylval;
 
-
 int yyparse (void);
-
 
 #endif /* !YY_YY_Y_TAB_H_INCLUDED  */
 /* Symbol kind.  */
@@ -581,18 +579,12 @@ typedef int yy_state_fast_t;
 # define YY_USE(E) /* empty */
 #endif
 
+#if defined __GNUC__ && ! defined __ICC && 407 <= __GNUC__ * 100 + __GNUC_MINOR__
 /* Suppress an incorrect diagnostic about yylval being uninitialized.  */
-#if defined __GNUC__ && ! defined __ICC && 406 <= __GNUC__ * 100 + __GNUC_MINOR__
-# if __GNUC__ * 100 + __GNUC_MINOR__ < 407
-#  define YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN                           \
-    _Pragma ("GCC diagnostic push")                                     \
-    _Pragma ("GCC diagnostic ignored \"-Wuninitialized\"")
-# else
-#  define YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN                           \
+# define YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN                            \
     _Pragma ("GCC diagnostic push")                                     \
     _Pragma ("GCC diagnostic ignored \"-Wuninitialized\"")              \
     _Pragma ("GCC diagnostic ignored \"-Wmaybe-uninitialized\"")
-# endif
 # define YY_IGNORE_MAYBE_UNINITIALIZED_END      \
     _Pragma ("GCC diagnostic pop")
 #else
@@ -810,7 +802,7 @@ static const yytype_int8 yytranslate[] =
 };
 
 #if YYDEBUG
-/* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
+  /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int16 yyrline[] =
 {
        0,   109,   109,   110,   111,   112,   125,   128,   130,   131,
@@ -875,6 +867,21 @@ yysymbol_name (yysymbol_kind_t yysymbol)
 }
 #endif
 
+#ifdef YYPRINT
+/* YYTOKNUM[NUM] -- (External) token number corresponding to the
+   (internal) symbol number NUM (which must be that of a token).  */
+static const yytype_int16 yytoknum[] =
+{
+       0,   256,   257,   258,   259,    61,   260,   261,   262,   263,
+      45,    44,    64,    40,    41,   124,    59,   264,    91,    93,
+     265,   266,   267,   268,   269,   270,   271,   272,   273,    92,
+     126,   274,   275,    96,   276,   277,   278,   279,   280,   281,
+     282,   283,   284,   285,   286,   287,   288,   289,   290,   291,
+     292,   293,   294,   295,   296,   297,   298,    58,   123,    95,
+     125
+};
+#endif
+
 #define YYPACT_NINF (-272)
 
 #define yypact_value_is_default(Yyn) \
@@ -885,8 +892,8 @@ yysymbol_name (yysymbol_kind_t yysymbol)
 #define yytable_value_is_error(Yyn) \
   0
 
-/* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
-   STATE-NUM.  */
+  /* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
+     STATE-NUM.  */
 static const yytype_int16 yypact[] =
 {
      233,  -272,   566,   122,   145,  -272,   743,   428,   470,   566,
@@ -926,9 +933,9 @@ static const yytype_int16 yypact[] =
     -272,  -272,  -272,   332,    44,  -272,  -272,  -272,  -272,  -272
 };
 
-/* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
-   Performed when YYTABLE does not specify something else to do.  Zero
-   means the default is an error.  */
+  /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
+     Performed when YYTABLE does not specify something else to do.  Zero
+     means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
        0,     5,     0,     0,     0,   127,     0,     0,     0,     0,
@@ -968,7 +975,7 @@ static const yytype_uint8 yydefact[] =
       32,    34,    43,     0,     0,    13,    16,    15,    46,    23
 };
 
-/* YYPGOTO[NTERM-NUM].  */
+  /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int16 yypgoto[] =
 {
     -272,  -272,  -272,  -272,  -272,    41,    48,  -272,  -100,   241,
@@ -980,7 +987,7 @@ static const yytype_int16 yypgoto[] =
      133,  -272,  -272,  -272,   144,  -272,  -272,   201,   -90,  -130
 };
 
-/* YYDEFGOTO[NTERM-NUM].  */
+  /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int16 yydefgoto[] =
 {
        0,     4,    32,    33,    79,   319,   320,   321,   194,    80,
@@ -992,9 +999,9 @@ static const yytype_int16 yydefgoto[] =
      226,   270,   271,   272,   273,    48,   166,   167,   145,   146
 };
 
-/* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
-   positive, shift that token.  If negative, reduce the rule whose
-   number is the opposite.  If YYTABLE_NINF, syntax error.  */
+  /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
+     positive, shift that token.  If negative, reduce the rule whose
+     number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_int16 yytable[] =
 {
       25,    83,    44,    84,    42,    43,    46,    49,    50,    63,
@@ -1167,8 +1174,8 @@ static const yytype_int16 yycheck[] =
       -1,    -1,    -1,    -1,    -1,    -1,    -1,    59
 };
 
-/* YYSTOS[STATE-NUM] -- The symbol kind of the accessing symbol of
-   state STATE-NUM.  */
+  /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
+     symbol of state STATE-NUM.  */
 static const yytype_uint8 yystos[] =
 {
        0,     1,     3,     4,    62,     1,    10,    13,    18,    20,
@@ -1208,7 +1215,7 @@ static const yytype_uint8 yystos[] =
       76,    82,    14,    11,    66,    67,   111,    84,    41,   129
 };
 
-/* YYR1[RULE-NUM] -- Symbol kind of the left-hand side of rule RULE-NUM.  */
+  /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
        0,    61,    62,    62,    62,    62,    63,    64,    65,    65,
@@ -1233,7 +1240,7 @@ static const yytype_uint8 yyr1[] =
      130
 };
 
-/* YYR2[RULE-NUM] -- Number of symbols on the right-hand side of rule RULE-NUM.  */
+  /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
 static const yytype_int8 yyr2[] =
 {
        0,     2,     2,     3,     2,     1,     3,     1,     3,     3,
@@ -1267,7 +1274,6 @@ enum { YYENOMEM = -2 };
 #define YYACCEPT        goto yyacceptlab
 #define YYABORT         goto yyabortlab
 #define YYERROR         goto yyerrorlab
-#define YYNOMEM         goto yyexhaustedlab
 
 
 #define YYRECOVERING()  (!!yyerrstatus)
@@ -1308,7 +1314,10 @@ do {                                            \
     YYFPRINTF Args;                             \
 } while (0)
 
-
+/* This macro is provided for backward compatibility. */
+# ifndef YY_LOCATION_PRINT
+#  define YY_LOCATION_PRINT(File, Loc) ((void) 0)
+# endif
 
 
 # define YY_SYMBOL_PRINT(Title, Kind, Value, Location)                    \
@@ -1335,6 +1344,10 @@ yy_symbol_value_print (FILE *yyo,
   YY_USE (yyoutput);
   if (!yyvaluep)
     return;
+# ifdef YYPRINT
+  if (yykind < YYNTOKENS)
+    YYPRINT (yyo, yytoknum[yykind], *yyvaluep);
+# endif
   YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
   YY_USE (yykind);
   YY_IGNORE_MAYBE_UNINITIALIZED_END
@@ -1519,7 +1532,6 @@ yyparse (void)
   YYDPRINTF ((stderr, "Starting parse\n"));
 
   yychar = YYEMPTY; /* Cause a token to be read.  */
-
   goto yysetstate;
 
 
@@ -1545,7 +1557,7 @@ yysetstate:
 
   if (yyss + yystacksize - 1 <= yyssp)
 #if !defined yyoverflow && !defined YYSTACK_RELOCATE
-    YYNOMEM;
+    goto yyexhaustedlab;
 #else
     {
       /* Get the current used size of the three stacks, in elements.  */
@@ -1573,7 +1585,7 @@ yysetstate:
 # else /* defined YYSTACK_RELOCATE */
       /* Extend the stack our own way.  */
       if (YYMAXDEPTH <= yystacksize)
-        YYNOMEM;
+        goto yyexhaustedlab;
       yystacksize *= 2;
       if (YYMAXDEPTH < yystacksize)
         yystacksize = YYMAXDEPTH;
@@ -1584,7 +1596,7 @@ yysetstate:
           YY_CAST (union yyalloc *,
                    YYSTACK_ALLOC (YY_CAST (YYSIZE_T, YYSTACK_BYTES (yystacksize))));
         if (! yyptr)
-          YYNOMEM;
+          goto yyexhaustedlab;
         YYSTACK_RELOCATE (yyss_alloc, yyss);
         YYSTACK_RELOCATE (yyvs_alloc, yyvs);
 #  undef YYSTACK_RELOCATE
@@ -1605,7 +1617,6 @@ yysetstate:
         YYABORT;
     }
 #endif /* !defined yyoverflow && !defined YYSTACK_RELOCATE */
-
 
   if (yystate == YYFINAL)
     YYACCEPT;
@@ -1721,146 +1732,146 @@ yyreduce:
   case 2: /* start: EVALEX exp  */
 #line 109 "parser.y"
                                         {inputExpr = yyvsp[0];	    sp-=1;}
-#line 1725 "y.tab.c"
+#line 1736 "y.tab.c"
     break;
 
   case 3: /* start: EVALEX exp wherePart  */
 #line 110 "parser.y"
                                         {inputExpr = letrec(yyvsp[0],yyvsp[-1]); sp-=2;}
-#line 1731 "y.tab.c"
+#line 1742 "y.tab.c"
     break;
 
   case 4: /* start: SCRIPT topModule  */
 #line 111 "parser.y"
                                         {valDefns  = yyvsp[0];	    sp-=1;}
-#line 1737 "y.tab.c"
+#line 1748 "y.tab.c"
     break;
 
   case 5: /* start: error  */
 #line 112 "parser.y"
                                         {syntaxError("input");}
-#line 1743 "y.tab.c"
+#line 1754 "y.tab.c"
     break;
 
   case 6: /* topModule: begin topDecls close  */
 #line 125 "parser.y"
                                         {yyval = gc2(yyvsp[-1]);}
-#line 1749 "y.tab.c"
+#line 1760 "y.tab.c"
     break;
 
   case 7: /* begin: error  */
 #line 128 "parser.y"
                                         {yyerrok; goOffside(startColumn);}
-#line 1755 "y.tab.c"
+#line 1766 "y.tab.c"
     break;
 
   case 8: /* topDecls: topDecls ';' topDecl  */
 #line 130 "parser.y"
                                         {yyval = gc2(yyvsp[-2]);}
-#line 1761 "y.tab.c"
+#line 1772 "y.tab.c"
     break;
 
   case 9: /* topDecls: topDecls ';' decl  */
 #line 131 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 1767 "y.tab.c"
+#line 1778 "y.tab.c"
     break;
 
   case 10: /* topDecls: topDecl  */
 #line 132 "parser.y"
                                         {yyval = gc0(NIL);}
-#line 1773 "y.tab.c"
+#line 1784 "y.tab.c"
     break;
 
   case 11: /* topDecls: decl  */
 #line 133 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 1779 "y.tab.c"
+#line 1790 "y.tab.c"
     break;
 
   case 12: /* topDecls: error  */
 #line 134 "parser.y"
                                         {syntaxError("definition");}
-#line 1785 "y.tab.c"
+#line 1796 "y.tab.c"
     break;
 
   case 13: /* ctDecls: ctDecls ';' ctDecl  */
 #line 138 "parser.y"
                               {yyval = gc3(appendOnto(yyvsp[-2], yyvsp[0]));}
-#line 1791 "y.tab.c"
+#line 1802 "y.tab.c"
     break;
 
   case 14: /* ctDecls: ctDecl  */
 #line 139 "parser.y"
                   {yyval = yyvsp[0];}
-#line 1797 "y.tab.c"
+#line 1808 "y.tab.c"
     break;
 
   case 15: /* ctDecl: conids ':' type  */
 #line 141 "parser.y"
                            {yyval = gc3(ct1Clause(intOf(yyvsp[-1]), yyvsp[0], yyvsp[-2]));}
-#line 1803 "y.tab.c"
+#line 1814 "y.tab.c"
     break;
 
   case 16: /* conids: conids ',' conid  */
 #line 143 "parser.y"
                             {yyval = gc3(cons(yyvsp[0], yyvsp[-2]));}
-#line 1809 "y.tab.c"
+#line 1820 "y.tab.c"
     break;
 
   case 17: /* conids: conid  */
 #line 144 "parser.y"
                  {yyval = gc1(singleton(yyvsp[0]));}
-#line 1815 "y.tab.c"
+#line 1826 "y.tab.c"
     break;
 
   case 18: /* pvarop: VAROP  */
 #line 147 "parser.y"
                         {yyval = gc1(yyvsp[0]);}
-#line 1821 "y.tab.c"
+#line 1832 "y.tab.c"
     break;
 
   case 19: /* pvarop: %empty  */
 #line 148 "parser.y"
                         {yyval = gc0(NIL);}
-#line 1827 "y.tab.c"
+#line 1838 "y.tab.c"
     break;
 
   case 20: /* $@1: %empty  */
 #line 151 "parser.y"
                      {typeLhs = yyvsp[0];}
-#line 1833 "y.tab.c"
+#line 1844 "y.tab.c"
     break;
 
   case 21: /* topDecl: CTYPE type $@1 WHERE '{' ctDecls close  */
 #line 152 "parser.y"
           {defTycon(6,yyvsp[-6], checkTyLhs(yyvsp[-5]), yyvsp[-1], DATATYPE); typeLhs = NIL;}
-#line 1839 "y.tab.c"
+#line 1850 "y.tab.c"
     break;
 
   case 22: /* $@2: %empty  */
 #line 153 "parser.y"
                                         {typeLhs = yyvsp[0];}
-#line 1845 "y.tab.c"
+#line 1856 "y.tab.c"
     break;
 
   case 23: /* topDecl: CTYPE context IMPLIES typeLhs $@2 WHERE '{' ctDecls close  */
 #line 154 "parser.y"
           {defTycon(8,yyvsp[-8], yyvsp[-5], ap(QUAL,pair (yyvsp[-7],yyvsp[-1])), DATATYPE); typeLhs = NIL;}
-#line 1851 "y.tab.c"
+#line 1862 "y.tab.c"
     break;
 
   case 24: /* topDecl: TYPE typeLhs '=' type invars  */
 #line 157 "parser.y"
                                                 {defTycon(5,yyvsp[-2],yyvsp[-3],yyvsp[-1],yyvsp[0]);}
-#line 1857 "y.tab.c"
+#line 1868 "y.tab.c"
     break;
 
   case 25: /* topDecl: DATA type '=' constrs deriving  */
 #line 159 "parser.y"
                                         {defTycon(5,yyvsp[-2],checkTyLhs(yyvsp[-3]),
 							rev(yyvsp[-1]),DATATYPE);}
-#line 1864 "y.tab.c"
+#line 1875 "y.tab.c"
     break;
 
   case 26: /* topDecl: DATA context IMPLIES typeLhs '=' constrs deriving  */
@@ -1868,7 +1879,7 @@ yyreduce:
                                         {defTycon(7,yyvsp[-2],yyvsp[-3],
 						  ap(QUAL,pair(yyvsp[-5],rev(yyvsp[-1]))),
 						  DATATYPE);}
-#line 1872 "y.tab.c"
+#line 1883 "y.tab.c"
     break;
 
   case 27: /* typeLhs: typeLhs pvarop VARID  */
@@ -1876,74 +1887,74 @@ yyreduce:
                                         {typeSyntaxChk("type Lhs", yyvsp[-1]);
 					 yyval = gc3(ap(yyvsp[-2],yyvsp[0]));
 					}
-#line 1880 "y.tab.c"
+#line 1891 "y.tab.c"
     break;
 
   case 28: /* typeLhs: CONID  */
 #line 170 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 1886 "y.tab.c"
+#line 1897 "y.tab.c"
     break;
 
   case 29: /* typeLhs: error  */
 #line 171 "parser.y"
                                         {syntaxError("type defn lhs");}
-#line 1892 "y.tab.c"
+#line 1903 "y.tab.c"
     break;
 
   case 30: /* invars: IN rsvars  */
 #line 173 "parser.y"
                                         {yyval = gc2(yyvsp[0]);}
-#line 1898 "y.tab.c"
+#line 1909 "y.tab.c"
     break;
 
   case 31: /* invars: %empty  */
 #line 174 "parser.y"
                                         {yyval = gc0(SYNONYM);}
-#line 1904 "y.tab.c"
+#line 1915 "y.tab.c"
     break;
 
   case 32: /* rsvars: rsvars ',' rsvar  */
 #line 176 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 1910 "y.tab.c"
+#line 1921 "y.tab.c"
     break;
 
   case 33: /* rsvars: rsvar  */
 #line 177 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 1916 "y.tab.c"
+#line 1927 "y.tab.c"
     break;
 
   case 34: /* rsvar: var ':' sigType  */
 #line 179 "parser.y"
                                         {yyval = gc3(sigdecl(yyvsp[-1],singleton(yyvsp[-2]),
 							     yyvsp[0]));}
-#line 1923 "y.tab.c"
+#line 1934 "y.tab.c"
     break;
 
   case 35: /* rsvar: var  */
 #line 181 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 1929 "y.tab.c"
+#line 1940 "y.tab.c"
     break;
 
   case 36: /* constrs: constrs '|' constr  */
 #line 183 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 1935 "y.tab.c"
+#line 1946 "y.tab.c"
     break;
 
   case 37: /* constrs: constr  */
 #line 184 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 1941 "y.tab.c"
+#line 1952 "y.tab.c"
     break;
 
   case 38: /* constr: type conop type  */
 #line 186 "parser.y"
                                         {yyval = gc3(ap(ap(yyvsp[-1],yyvsp[-2]),yyvsp[0]));}
-#line 1947 "y.tab.c"
+#line 1958 "y.tab.c"
     break;
 
   case 39: /* constr: type  */
@@ -1951,91 +1962,91 @@ yyreduce:
                                         {if (!isCon(getHead(yyvsp[0])))
 					     syntaxError("data constructor");
 					 yyval = yyvsp[0];}
-#line 1955 "y.tab.c"
+#line 1966 "y.tab.c"
     break;
 
   case 40: /* constr: error  */
 #line 190 "parser.y"
                                         {syntaxError("data type definition");}
-#line 1961 "y.tab.c"
+#line 1972 "y.tab.c"
     break;
 
   case 41: /* deriving: %empty  */
 #line 192 "parser.y"
                                         {yyval = gc0(NIL);}
-#line 1967 "y.tab.c"
+#line 1978 "y.tab.c"
     break;
 
   case 42: /* deriving: DERIVING CONID  */
 #line 193 "parser.y"
                                         {yyval = gc2(singleton(yyvsp[0]));}
-#line 1973 "y.tab.c"
+#line 1984 "y.tab.c"
     break;
 
   case 43: /* deriving: DERIVING '(' derivs0 ')'  */
 #line 194 "parser.y"
                                         {yyval = gc4(yyvsp[-1]);}
-#line 1979 "y.tab.c"
+#line 1990 "y.tab.c"
     break;
 
   case 44: /* derivs0: %empty  */
 #line 196 "parser.y"
                                         {yyval = gc0(NIL);}
-#line 1985 "y.tab.c"
+#line 1996 "y.tab.c"
     break;
 
   case 45: /* derivs0: derivs  */
 #line 197 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 1991 "y.tab.c"
+#line 2002 "y.tab.c"
     break;
 
   case 46: /* derivs: derivs ',' CONID  */
 #line 199 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 1997 "y.tab.c"
+#line 2008 "y.tab.c"
     break;
 
   case 47: /* derivs: CONID  */
 #line 200 "parser.y"
                                         {yyval = gc1(singleton(yyvsp[0]));}
-#line 2003 "y.tab.c"
+#line 2014 "y.tab.c"
     break;
 
   case 48: /* sigType: context IMPLIES type  */
 #line 211 "parser.y"
                                         {yyval = gc3(ap(QUAL,pair(yyvsp[-2],yyvsp[0])));}
-#line 2009 "y.tab.c"
+#line 2020 "y.tab.c"
     break;
 
   case 49: /* sigType: type  */
 #line 212 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2015 "y.tab.c"
+#line 2026 "y.tab.c"
     break;
 
   case 50: /* context: type  */
 #line 214 "parser.y"
                                         {yyval = gc1(checkContext(yyvsp[0]));}
-#line 2021 "y.tab.c"
+#line 2032 "y.tab.c"
     break;
 
   case 51: /* type: ctype  */
 #line 216 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2027 "y.tab.c"
+#line 2038 "y.tab.c"
     break;
 
   case 52: /* type: ctype FUNARROW type  */
 #line 217 "parser.y"
                                         {yyval = gc3(ap(ap(ARROW,yyvsp[-2]),yyvsp[0]));}
-#line 2033 "y.tab.c"
+#line 2044 "y.tab.c"
     break;
 
   case 53: /* type: error  */
 #line 218 "parser.y"
                                         {syntaxError("type expression");}
-#line 2039 "y.tab.c"
+#line 2050 "y.tab.c"
     break;
 
   case 54: /* ctype: ctype pvarop atype  */
@@ -2043,476 +2054,476 @@ yyreduce:
                                         {typeSyntaxChk("type expression", yyvsp[-1]);
 					 yyval = gc3(ap(yyvsp[-2],yyvsp[0]));
 					}
-#line 2047 "y.tab.c"
+#line 2058 "y.tab.c"
     break;
 
   case 55: /* ctype: atype  */
 #line 224 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2053 "y.tab.c"
+#line 2064 "y.tab.c"
     break;
 
   case 56: /* atype: VARID  */
 #line 226 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2059 "y.tab.c"
+#line 2070 "y.tab.c"
     break;
 
   case 57: /* atype: CONID  */
 #line 227 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2065 "y.tab.c"
+#line 2076 "y.tab.c"
     break;
 
   case 58: /* atype: '(' ')'  */
 #line 228 "parser.y"
                                         {yyval = gc2(UNIT);}
-#line 2071 "y.tab.c"
+#line 2082 "y.tab.c"
     break;
 
   case 59: /* atype: '(' FUNARROW ')'  */
 #line 229 "parser.y"
                                         {yyval = gc3(ARROW);}
-#line 2077 "y.tab.c"
+#line 2088 "y.tab.c"
     break;
 
   case 60: /* atype: '(' type ')'  */
 #line 230 "parser.y"
                                         {yyval = gc3(yyvsp[-1]);}
-#line 2083 "y.tab.c"
+#line 2094 "y.tab.c"
     break;
 
   case 61: /* atype: '(' ctype FUNARROW ')'  */
 #line 231 "parser.y"
                                         {yyval = gc4(ap(ARROW,yyvsp[-2]));}
-#line 2089 "y.tab.c"
+#line 2100 "y.tab.c"
     break;
 
   case 62: /* atype: '(' tupCommas ')'  */
 #line 232 "parser.y"
                                         {yyval = gc3(yyvsp[-1]);}
-#line 2095 "y.tab.c"
+#line 2106 "y.tab.c"
     break;
 
   case 63: /* atype: '(' typeTuple ')'  */
 #line 233 "parser.y"
                                         {yyval = gc3(buildTuple(yyvsp[-1]));}
-#line 2101 "y.tab.c"
+#line 2112 "y.tab.c"
     break;
 
   case 64: /* atype: '[' type ']'  */
 #line 234 "parser.y"
                                         {yyval = gc3(ap(LIST,yyvsp[-1]));}
-#line 2107 "y.tab.c"
+#line 2118 "y.tab.c"
     break;
 
   case 65: /* atype: '[' ']'  */
 #line 235 "parser.y"
                                         {yyval = gc2(LIST);}
-#line 2113 "y.tab.c"
+#line 2124 "y.tab.c"
     break;
 
   case 66: /* tupCommas: tupCommas ','  */
 #line 237 "parser.y"
                                         {yyval = gc2(mkTuple(tupleOf(yyvsp[-1])+1));}
-#line 2119 "y.tab.c"
+#line 2130 "y.tab.c"
     break;
 
   case 67: /* tupCommas: ','  */
 #line 238 "parser.y"
                                         {yyval = gc1(mkTuple(2));}
-#line 2125 "y.tab.c"
+#line 2136 "y.tab.c"
     break;
 
   case 68: /* typeTuple: typeTuple ',' type  */
 #line 241 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 2131 "y.tab.c"
+#line 2142 "y.tab.c"
     break;
 
   case 69: /* typeTuple: type ',' type  */
 #line 242 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],cons(yyvsp[-2],NIL)));}
-#line 2137 "y.tab.c"
+#line 2148 "y.tab.c"
     break;
 
   case 70: /* topDecl: INFIXL optdigit ops  */
 #line 247 "parser.y"
                                         {fixDefn(LEFT_ASS,yyvsp[-2],yyvsp[-1],yyvsp[0]); sp-=3;}
-#line 2143 "y.tab.c"
+#line 2154 "y.tab.c"
     break;
 
   case 71: /* topDecl: INFIXR optdigit ops  */
 #line 248 "parser.y"
                                         {fixDefn(RIGHT_ASS,yyvsp[-2],yyvsp[-1],yyvsp[0]);sp-=3;}
-#line 2149 "y.tab.c"
+#line 2160 "y.tab.c"
     break;
 
   case 72: /* topDecl: INFIX optdigit ops  */
 #line 249 "parser.y"
                                         {fixDefn(NON_ASS,yyvsp[-2],yyvsp[-1],yyvsp[0]);  sp-=3;}
-#line 2155 "y.tab.c"
+#line 2166 "y.tab.c"
     break;
 
   case 73: /* optdigit: NUMLIT  */
 #line 251 "parser.y"
                                         {yyval = gc1(checkPrec(yyvsp[0]));}
-#line 2161 "y.tab.c"
+#line 2172 "y.tab.c"
     break;
 
   case 74: /* optdigit: %empty  */
 #line 252 "parser.y"
                                         {yyval = gc0(mkInt(DEF_PREC));}
-#line 2167 "y.tab.c"
+#line 2178 "y.tab.c"
     break;
 
   case 75: /* ops: ops ',' op  */
 #line 254 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 2173 "y.tab.c"
+#line 2184 "y.tab.c"
     break;
 
   case 76: /* ops: op  */
 #line 255 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 2179 "y.tab.c"
+#line 2190 "y.tab.c"
     break;
 
   case 77: /* op: varop  */
 #line 257 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2185 "y.tab.c"
+#line 2196 "y.tab.c"
     break;
 
   case 78: /* op: conop  */
 #line 258 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2191 "y.tab.c"
+#line 2202 "y.tab.c"
     break;
 
   case 79: /* op: '-'  */
 #line 259 "parser.y"
                                         {yyval = gc1(varMinus);}
-#line 2197 "y.tab.c"
+#line 2208 "y.tab.c"
     break;
 
   case 80: /* varop: VAROP  */
 #line 261 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2203 "y.tab.c"
+#line 2214 "y.tab.c"
     break;
 
   case 81: /* varop: '`' VARID '`'  */
 #line 262 "parser.y"
                                         {yyval = gc3(yyvsp[-1]);}
-#line 2209 "y.tab.c"
+#line 2220 "y.tab.c"
     break;
 
   case 82: /* conop: CONOP  */
 #line 264 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2215 "y.tab.c"
+#line 2226 "y.tab.c"
     break;
 
   case 83: /* conop: '`' CONID '`'  */
 #line 265 "parser.y"
                                         {yyval = gc3(yyvsp[-1]);}
-#line 2221 "y.tab.c"
+#line 2232 "y.tab.c"
     break;
 
   case 84: /* topDecl: PRIMITIVE prims ':' sigType  */
 #line 270 "parser.y"
                                        {primDefn(yyvsp[-3],yyvsp[-2],yyvsp[0]); sp-=4;}
-#line 2227 "y.tab.c"
+#line 2238 "y.tab.c"
     break;
 
   case 85: /* prims: prims ',' prim  */
 #line 272 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 2233 "y.tab.c"
+#line 2244 "y.tab.c"
     break;
 
   case 86: /* prims: prim  */
 #line 273 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 2239 "y.tab.c"
+#line 2250 "y.tab.c"
     break;
 
   case 87: /* prims: error  */
 #line 274 "parser.y"
                                         {syntaxError("primitive defn");}
-#line 2245 "y.tab.c"
+#line 2256 "y.tab.c"
     break;
 
   case 88: /* prim: var STRINGLIT  */
 #line 276 "parser.y"
                                         {yyval = gc2(pair(yyvsp[-1],yyvsp[0]));}
-#line 2251 "y.tab.c"
+#line 2262 "y.tab.c"
     break;
 
   case 89: /* topDecl: TCLASS classHead classBody  */
 #line 281 "parser.y"
                                         {classDefn(intOf(yyvsp[-2]),yyvsp[-1],yyvsp[0]); sp-=3;}
-#line 2257 "y.tab.c"
+#line 2268 "y.tab.c"
     break;
 
   case 90: /* topDecl: TINSTANCE classHead instBody  */
 #line 282 "parser.y"
                                         {instDefn(intOf(yyvsp[-2]),yyvsp[-1],yyvsp[0]);  sp-=3;}
-#line 2263 "y.tab.c"
+#line 2274 "y.tab.c"
     break;
 
   case 91: /* topDecl: DEFAULT type  */
 #line 283 "parser.y"
                                         {sp-=2;}
-#line 2269 "y.tab.c"
+#line 2280 "y.tab.c"
     break;
 
   case 92: /* classHead: context IMPLIES type  */
 #line 285 "parser.y"
                                         {yyval = gc3(pair(yyvsp[-2],checkClass(yyvsp[0])));}
-#line 2275 "y.tab.c"
+#line 2286 "y.tab.c"
     break;
 
   case 93: /* classHead: type  */
 #line 286 "parser.y"
                                         {yyval = gc1(pair(NIL,checkClass(yyvsp[0])));}
-#line 2281 "y.tab.c"
+#line 2292 "y.tab.c"
     break;
 
   case 94: /* classBody: WHERE '{' csigdecls close  */
 #line 288 "parser.y"
                                         {yyval = gc4(yyvsp[-1]);}
-#line 2287 "y.tab.c"
+#line 2298 "y.tab.c"
     break;
 
   case 95: /* classBody: %empty  */
 #line 289 "parser.y"
                                         {yyval = gc0(NIL);}
-#line 2293 "y.tab.c"
+#line 2304 "y.tab.c"
     break;
 
   case 96: /* instBody: WHERE '{' decls close  */
 #line 291 "parser.y"
                                         {yyval = gc4(yyvsp[-1]);}
-#line 2299 "y.tab.c"
+#line 2310 "y.tab.c"
     break;
 
   case 97: /* instBody: %empty  */
 #line 292 "parser.y"
                                         {yyval = gc0(NIL);}
-#line 2305 "y.tab.c"
+#line 2316 "y.tab.c"
     break;
 
   case 98: /* csigdecls: csigdecls ';' csigdecl  */
 #line 294 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 2311 "y.tab.c"
+#line 2322 "y.tab.c"
     break;
 
   case 99: /* csigdecls: csigdecl  */
 #line 295 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 2317 "y.tab.c"
+#line 2328 "y.tab.c"
     break;
 
   case 100: /* csigdecl: decl  */
 #line 297 "parser.y"
                                         {yyval = gc1(yyvsp[0]);}
-#line 2323 "y.tab.c"
+#line 2334 "y.tab.c"
     break;
 
   case 101: /* csigdecl: error  */
 #line 298 "parser.y"
                                         {syntaxError("class body");}
-#line 2329 "y.tab.c"
+#line 2340 "y.tab.c"
     break;
 
   case 102: /* decl: vars ':' sigType  */
 #line 303 "parser.y"
                                         {yyval = gc3(sigdecl(yyvsp[-1],yyvsp[-2],yyvsp[0]));}
-#line 2335 "y.tab.c"
+#line 2346 "y.tab.c"
     break;
 
   case 103: /* decl: opExp rhs  */
 #line 304 "parser.y"
                                         {yyval = gc2(pair(yyvsp[-1],yyvsp[0]));}
-#line 2341 "y.tab.c"
+#line 2352 "y.tab.c"
     break;
 
   case 104: /* decls: decls ';' decl  */
 #line 306 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 2347 "y.tab.c"
+#line 2358 "y.tab.c"
     break;
 
   case 105: /* decls: decl  */
 #line 307 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 2353 "y.tab.c"
+#line 2364 "y.tab.c"
     break;
 
   case 106: /* rhs: rhs1 wherePart  */
 #line 309 "parser.y"
                                         {yyval = gc2(letrec(yyvsp[0],yyvsp[-1]));}
-#line 2359 "y.tab.c"
+#line 2370 "y.tab.c"
     break;
 
   case 107: /* rhs: rhs1  */
 #line 310 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2365 "y.tab.c"
+#line 2376 "y.tab.c"
     break;
 
   case 108: /* rhs: error  */
 #line 311 "parser.y"
                                         {syntaxError("declaration");}
-#line 2371 "y.tab.c"
+#line 2382 "y.tab.c"
     break;
 
   case 109: /* rhs1: '=' exp  */
 #line 313 "parser.y"
                                         {yyval = gc2(pair(yyvsp[-1],yyvsp[0]));}
-#line 2377 "y.tab.c"
+#line 2388 "y.tab.c"
     break;
 
   case 110: /* rhs1: gdefs  */
 #line 314 "parser.y"
                                         {yyval = gc1(grded(rev(yyvsp[0])));}
-#line 2383 "y.tab.c"
+#line 2394 "y.tab.c"
     break;
 
   case 111: /* wherePart: WHERE '{' decls close  */
 #line 316 "parser.y"
                                         {yyval = gc4(yyvsp[-1]);}
-#line 2389 "y.tab.c"
+#line 2400 "y.tab.c"
     break;
 
   case 112: /* gdefs: gdefs gdef  */
 #line 318 "parser.y"
                                         {yyval = gc2(cons(yyvsp[0],yyvsp[-1]));}
-#line 2395 "y.tab.c"
+#line 2406 "y.tab.c"
     break;
 
   case 113: /* gdefs: gdef  */
 #line 319 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 2401 "y.tab.c"
+#line 2412 "y.tab.c"
     break;
 
   case 114: /* gdef: '|' exp '=' exp  */
 #line 321 "parser.y"
                                         {yyval = gc4(pair(yyvsp[-1],pair(yyvsp[-2],yyvsp[0])));}
-#line 2407 "y.tab.c"
+#line 2418 "y.tab.c"
     break;
 
   case 115: /* gdef: '=' exp ',' IF exp  */
 #line 328 "parser.y"
                                         {yyval = gc5(pair(yyvsp[-4],pair(yyvsp[0],yyvsp[-3])));}
-#line 2413 "y.tab.c"
+#line 2424 "y.tab.c"
     break;
 
   case 116: /* gdef: '=' exp ',' exp  */
 #line 329 "parser.y"
                                         {yyval = gc4(pair(yyvsp[-3],pair(yyvsp[0],yyvsp[-2])));}
-#line 2419 "y.tab.c"
+#line 2430 "y.tab.c"
     break;
 
   case 117: /* vars: vars ',' var  */
 #line 331 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 2425 "y.tab.c"
+#line 2436 "y.tab.c"
     break;
 
   case 118: /* vars: var  */
 #line 332 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 2431 "y.tab.c"
+#line 2442 "y.tab.c"
     break;
 
   case 119: /* var: varid  */
 #line 334 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2437 "y.tab.c"
+#line 2448 "y.tab.c"
     break;
 
   case 120: /* var: '(' '-' ')'  */
 #line 335 "parser.y"
                                         {yyval = gc3(varMinus);}
-#line 2443 "y.tab.c"
+#line 2454 "y.tab.c"
     break;
 
   case 121: /* varid: VARID  */
 #line 337 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2449 "y.tab.c"
+#line 2460 "y.tab.c"
     break;
 
   case 122: /* varid: '(' VAROP ')'  */
 #line 338 "parser.y"
                                         {yyval = gc3(yyvsp[-1]);}
-#line 2455 "y.tab.c"
+#line 2466 "y.tab.c"
     break;
 
   case 123: /* conid: CONID  */
 #line 340 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2461 "y.tab.c"
+#line 2472 "y.tab.c"
     break;
 
   case 124: /* conid: '(' CONOP ')'  */
 #line 341 "parser.y"
                                         {yyval = gc3(yyvsp[-1]);}
-#line 2467 "y.tab.c"
+#line 2478 "y.tab.c"
     break;
 
   case 125: /* exp: opExp ':' sigType  */
 #line 346 "parser.y"
                                         {yyval = gc3(ap(ESIGN,pair(yyvsp[-2],yyvsp[0])));}
-#line 2473 "y.tab.c"
+#line 2484 "y.tab.c"
     break;
 
   case 126: /* exp: opExp  */
 #line 347 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2479 "y.tab.c"
+#line 2490 "y.tab.c"
     break;
 
   case 127: /* exp: error  */
 #line 348 "parser.y"
                                         {syntaxError("expression");}
-#line 2485 "y.tab.c"
+#line 2496 "y.tab.c"
     break;
 
   case 128: /* opExp: pfxExp  */
 #line 350 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2491 "y.tab.c"
+#line 2502 "y.tab.c"
     break;
 
   case 129: /* opExp: pfxExp op pfxExp  */
 #line 351 "parser.y"
                                         {yyval = gc3(opapd(yyvsp[-2],yyvsp[-1],yyvsp[0]));}
-#line 2497 "y.tab.c"
+#line 2508 "y.tab.c"
     break;
 
   case 130: /* opExp: opExp0  */
 #line 353 "parser.y"
                                         {yyval = gc1((*tidyInfix[newSyntax])(yyvsp[0]));}
-#line 2503 "y.tab.c"
+#line 2514 "y.tab.c"
     break;
 
   case 131: /* opExp0: opExp0 op pfxExp  */
 #line 355 "parser.y"
                                         {yyval = gc3(opap(yyvsp[-2],yyvsp[-1],yyvsp[0]));}
-#line 2509 "y.tab.c"
+#line 2520 "y.tab.c"
     break;
 
   case 132: /* opExp0: pfxExp op pfxExp op pfxExp  */
 #line 356 "parser.y"
                                         {yyval =
  		  gc5(opap(opap(singleton(yyvsp[-4]), yyvsp[-3], yyvsp[-2]),yyvsp[-1],yyvsp[0]));}
-#line 2516 "y.tab.c"
+#line 2527 "y.tab.c"
     break;
 
   case 133: /* pfxExp: '-' appExp  */
@@ -2522,7 +2533,7 @@ yyreduce:
 					 else
 					     yyval = gc2(ap(varNegate,yyvsp[0]));
 					}
-#line 2526 "y.tab.c"
+#line 2537 "y.tab.c"
     break;
 
   case 134: /* pfxExp: '\\' pats FUNARROW exp  */
@@ -2530,43 +2541,43 @@ yyreduce:
                                         {yyval = gc4(ap(LAMBDA,
 						     pair(rev(yyvsp[-2]),
 						          pair(yyvsp[-1],yyvsp[0]))));}
-#line 2534 "y.tab.c"
+#line 2545 "y.tab.c"
     break;
 
   case 135: /* pfxExp: LET '{' decls close IN exp  */
 #line 367 "parser.y"
                                         {yyval = gc6(letrec(yyvsp[-3],yyvsp[0]));}
-#line 2540 "y.tab.c"
+#line 2551 "y.tab.c"
     break;
 
   case 136: /* pfxExp: IF exp THEN exp ELSE exp  */
 #line 368 "parser.y"
                                         {yyval = gc6(ap(COND,triple(yyvsp[-4],yyvsp[-2],yyvsp[0])));}
-#line 2546 "y.tab.c"
+#line 2557 "y.tab.c"
     break;
 
   case 137: /* pfxExp: CASEXP exp OF '{' alts close  */
 #line 369 "parser.y"
                                         {yyval = gc6(ap(CASE,pair(yyvsp[-4],rev(yyvsp[-1]))));}
-#line 2552 "y.tab.c"
+#line 2563 "y.tab.c"
     break;
 
   case 138: /* pfxExp: appExp  */
 #line 370 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2558 "y.tab.c"
+#line 2569 "y.tab.c"
     break;
 
   case 139: /* pats: pats atomic  */
 #line 372 "parser.y"
                                         {yyval = gc2(cons(yyvsp[0],yyvsp[-1]));}
-#line 2564 "y.tab.c"
+#line 2575 "y.tab.c"
     break;
 
   case 140: /* pats: atomic  */
 #line 373 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 2570 "y.tab.c"
+#line 2581 "y.tab.c"
     break;
 
   case 141: /* appExp: appExp atomic  */
@@ -2580,260 +2591,260 @@ yyreduce:
 		else
 		  yyval = gc2(ap(yyvsp[-1],yyvsp[0]));
 	      }
-#line 2584 "y.tab.c"
+#line 2595 "y.tab.c"
     break;
 
   case 142: /* appExp: TRUNST atomic  */
 #line 385 "parser.y"
                                         {yyval = gc2(ap(RUNST,yyvsp[0]));}
-#line 2590 "y.tab.c"
+#line 2601 "y.tab.c"
     break;
 
   case 143: /* appExp: atomic  */
 #line 386 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2596 "y.tab.c"
+#line 2607 "y.tab.c"
     break;
 
   case 144: /* atomic: var  */
 #line 388 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2602 "y.tab.c"
+#line 2613 "y.tab.c"
     break;
 
   case 145: /* atomic: var '@' atomic  */
 #line 389 "parser.y"
                                         {yyval = gc3(ap(ASPAT,pair(yyvsp[-2],yyvsp[0])));}
-#line 2608 "y.tab.c"
+#line 2619 "y.tab.c"
     break;
 
   case 146: /* atomic: '~' atomic  */
 #line 390 "parser.y"
                                         {yyval = gc2(ap(LAZYPAT,yyvsp[0]));}
-#line 2614 "y.tab.c"
+#line 2625 "y.tab.c"
     break;
 
   case 147: /* atomic: '_'  */
 #line 391 "parser.y"
                                         {yyval = gc1(WILDCARD);}
-#line 2620 "y.tab.c"
+#line 2631 "y.tab.c"
     break;
 
   case 148: /* atomic: conid  */
 #line 392 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2626 "y.tab.c"
+#line 2637 "y.tab.c"
     break;
 
   case 149: /* atomic: '(' ')'  */
 #line 393 "parser.y"
                                         {yyval = gc2(UNIT);}
-#line 2632 "y.tab.c"
+#line 2643 "y.tab.c"
     break;
 
   case 150: /* atomic: NUMLIT  */
 #line 394 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2638 "y.tab.c"
+#line 2649 "y.tab.c"
     break;
 
   case 151: /* atomic: CHARLIT  */
 #line 395 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2644 "y.tab.c"
+#line 2655 "y.tab.c"
     break;
 
   case 152: /* atomic: STRINGLIT  */
 #line 396 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2650 "y.tab.c"
+#line 2661 "y.tab.c"
     break;
 
   case 153: /* atomic: REPEAT  */
 #line 397 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2656 "y.tab.c"
+#line 2667 "y.tab.c"
     break;
 
   case 154: /* atomic: '(' exp ')'  */
 #line 398 "parser.y"
                                         {yyval = gc3(yyvsp[-1]);}
-#line 2662 "y.tab.c"
+#line 2673 "y.tab.c"
     break;
 
   case 155: /* atomic: '(' exps2 ')'  */
 #line 399 "parser.y"
                                         {yyval = gc3(buildTuple(yyvsp[-1]));}
-#line 2668 "y.tab.c"
+#line 2679 "y.tab.c"
     break;
 
   case 156: /* atomic: '[' list ']'  */
 #line 400 "parser.y"
                                         {yyval = gc3(yyvsp[-1]);}
-#line 2674 "y.tab.c"
+#line 2685 "y.tab.c"
     break;
 
   case 157: /* atomic: '(' pfxExp op ')'  */
 #line 401 "parser.y"
                                         {yyval = gc4(ap(yyvsp[-1],yyvsp[-2]));}
-#line 2680 "y.tab.c"
+#line 2691 "y.tab.c"
     break;
 
   case 158: /* atomic: '(' varop atomic ')'  */
 #line 402 "parser.y"
                                         {yyval = gc4(ap(ap(varFlip,yyvsp[-2]),yyvsp[-1]));}
-#line 2686 "y.tab.c"
+#line 2697 "y.tab.c"
     break;
 
   case 159: /* atomic: '(' conop atomic ')'  */
 #line 403 "parser.y"
                                         {yyval = gc4(ap(ap(varFlip,yyvsp[-2]),yyvsp[-1]));}
-#line 2692 "y.tab.c"
+#line 2703 "y.tab.c"
     break;
 
   case 160: /* exps2: exps2 ',' exp  */
 #line 405 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 2698 "y.tab.c"
+#line 2709 "y.tab.c"
     break;
 
   case 161: /* exps2: exp ',' exp  */
 #line 406 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],cons(yyvsp[-2],NIL)));}
-#line 2704 "y.tab.c"
+#line 2715 "y.tab.c"
     break;
 
   case 162: /* alts: alts ';' alt  */
 #line 408 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 2710 "y.tab.c"
+#line 2721 "y.tab.c"
     break;
 
   case 163: /* alts: alt  */
 #line 409 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 2716 "y.tab.c"
+#line 2727 "y.tab.c"
     break;
 
   case 164: /* alt: opExp altRhs  */
 #line 411 "parser.y"
                                         {yyval = gc2(pair(yyvsp[-1],yyvsp[0]));}
-#line 2722 "y.tab.c"
+#line 2733 "y.tab.c"
     break;
 
   case 165: /* altRhs: altRhs1 wherePart  */
 #line 413 "parser.y"
                                         {yyval = gc2(letrec(yyvsp[0],yyvsp[-1]));}
-#line 2728 "y.tab.c"
+#line 2739 "y.tab.c"
     break;
 
   case 166: /* altRhs: altRhs1  */
 #line 414 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2734 "y.tab.c"
+#line 2745 "y.tab.c"
     break;
 
   case 167: /* altRhs1: guardAlts  */
 #line 416 "parser.y"
                                         {yyval = gc1(grded(rev(yyvsp[0])));}
-#line 2740 "y.tab.c"
+#line 2751 "y.tab.c"
     break;
 
   case 168: /* altRhs1: FUNARROW exp  */
 #line 417 "parser.y"
                                         {yyval = gc2(pair(yyvsp[-1],yyvsp[0]));}
-#line 2746 "y.tab.c"
+#line 2757 "y.tab.c"
     break;
 
   case 169: /* altRhs1: error  */
 #line 418 "parser.y"
                                         {syntaxError("case expression");}
-#line 2752 "y.tab.c"
+#line 2763 "y.tab.c"
     break;
 
   case 170: /* guardAlts: guardAlts guardAlt  */
 #line 420 "parser.y"
                                         {yyval = gc2(cons(yyvsp[0],yyvsp[-1]));}
-#line 2758 "y.tab.c"
+#line 2769 "y.tab.c"
     break;
 
   case 171: /* guardAlts: guardAlt  */
 #line 421 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 2764 "y.tab.c"
+#line 2775 "y.tab.c"
     break;
 
   case 172: /* guardAlt: '|' opExp FUNARROW exp  */
 #line 423 "parser.y"
                                         {yyval = gc4(pair(yyvsp[-1],pair(yyvsp[-2],yyvsp[0])));}
-#line 2770 "y.tab.c"
+#line 2781 "y.tab.c"
     break;
 
   case 173: /* list: %empty  */
 #line 428 "parser.y"
                                         {yyval = gc0(nameNil);}
-#line 2776 "y.tab.c"
+#line 2787 "y.tab.c"
     break;
 
   case 174: /* list: exp  */
 #line 429 "parser.y"
                                         {yyval = gc1(ap(FINLIST,cons(yyvsp[0],NIL)));}
-#line 2782 "y.tab.c"
+#line 2793 "y.tab.c"
     break;
 
   case 175: /* list: exps2  */
 #line 430 "parser.y"
                                         {yyval = gc1(ap(FINLIST,rev(yyvsp[0])));}
-#line 2788 "y.tab.c"
+#line 2799 "y.tab.c"
     break;
 
   case 176: /* list: exp '|' quals  */
 #line 431 "parser.y"
                                         {yyval = gc3(ap(COMP,pair(yyvsp[-2],rev(yyvsp[0]))));}
-#line 2794 "y.tab.c"
+#line 2805 "y.tab.c"
     break;
 
   case 177: /* list: exp UPTO exp  */
 #line 432 "parser.y"
                                         {yyval = gc3(ap(ap(varFromTo,yyvsp[-2]),yyvsp[0]));}
-#line 2800 "y.tab.c"
+#line 2811 "y.tab.c"
     break;
 
   case 178: /* list: exp ',' exp UPTO  */
 #line 433 "parser.y"
                                         {yyval = gc4(ap(ap(varFromThen,yyvsp[-3]),yyvsp[-1]));}
-#line 2806 "y.tab.c"
+#line 2817 "y.tab.c"
     break;
 
   case 179: /* list: exp UPTO  */
 #line 434 "parser.y"
                                         {yyval = gc2(ap(varFrom,yyvsp[-1]));}
-#line 2812 "y.tab.c"
+#line 2823 "y.tab.c"
     break;
 
   case 180: /* list: exp ',' exp UPTO exp  */
 #line 435 "parser.y"
                                         {yyval = gc5(ap(ap(ap(varFromThenTo,
                                                                yyvsp[-4]),yyvsp[-2]),yyvsp[0]));}
-#line 2819 "y.tab.c"
+#line 2830 "y.tab.c"
     break;
 
   case 181: /* quals: quals ',' qual  */
 #line 438 "parser.y"
                                         {yyval = gc3(cons(yyvsp[0],yyvsp[-2]));}
-#line 2825 "y.tab.c"
+#line 2836 "y.tab.c"
     break;
 
   case 182: /* quals: qual  */
 #line 439 "parser.y"
                                         {yyval = gc1(cons(yyvsp[0],NIL));}
-#line 2831 "y.tab.c"
+#line 2842 "y.tab.c"
     break;
 
   case 183: /* qual: exp FROM exp  */
 #line 441 "parser.y"
                                         {yyval = gc3(ap(FROMQUAL,pair(yyvsp[-2],yyvsp[0])));}
-#line 2837 "y.tab.c"
+#line 2848 "y.tab.c"
     break;
 
   case 184: /* qual: exp '=' exp  */
@@ -2842,37 +2853,37 @@ yyreduce:
 						     singleton(
 							pair(yyvsp[-2],pair(yyvsp[-1],
 								     yyvsp[0])))));}
-#line 2846 "y.tab.c"
+#line 2857 "y.tab.c"
     break;
 
   case 185: /* qual: exp  */
 #line 446 "parser.y"
                                         {yyval = gc1(ap(BOOLQUAL,yyvsp[0]));}
-#line 2852 "y.tab.c"
+#line 2863 "y.tab.c"
     break;
 
   case 186: /* qual: LET '{' decls close  */
 #line 447 "parser.y"
                                         {yyval = gc4(ap(QWHERE,yyvsp[-1]));}
-#line 2858 "y.tab.c"
+#line 2869 "y.tab.c"
     break;
 
   case 187: /* close: ';' close1  */
 #line 473 "parser.y"
                                         {yyval = gc2(yyvsp[0]);}
-#line 2864 "y.tab.c"
+#line 2875 "y.tab.c"
     break;
 
   case 188: /* close: close1  */
 #line 474 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2870 "y.tab.c"
+#line 2881 "y.tab.c"
     break;
 
   case 189: /* close1: '}'  */
 #line 476 "parser.y"
                                         {yyval = yyvsp[0];}
-#line 2876 "y.tab.c"
+#line 2887 "y.tab.c"
     break;
 
   case 190: /* close1: error  */
@@ -2888,11 +2899,11 @@ yyreduce:
                                          else
                                              syntaxError("definition");
                                         }
-#line 2892 "y.tab.c"
+#line 2903 "y.tab.c"
     break;
 
 
-#line 2896 "y.tab.c"
+#line 2907 "y.tab.c"
 
       default: break;
     }
@@ -2974,7 +2985,6 @@ yyerrorlab:
      label yyerrorlab therefore never appears in user code.  */
   if (0)
     YYERROR;
-  ++yynerrs;
 
   /* Do not reclaim the symbols of the rule whose action triggered
      this YYERROR.  */
@@ -3035,7 +3045,7 @@ yyerrlab1:
 `-------------------------------------*/
 yyacceptlab:
   yyresult = 0;
-  goto yyreturnlab;
+  goto yyreturn;
 
 
 /*-----------------------------------.
@@ -3043,22 +3053,24 @@ yyacceptlab:
 `-----------------------------------*/
 yyabortlab:
   yyresult = 1;
-  goto yyreturnlab;
+  goto yyreturn;
 
 
-/*-----------------------------------------------------------.
-| yyexhaustedlab -- YYNOMEM (memory exhaustion) comes here.  |
-`-----------------------------------------------------------*/
+#if !defined yyoverflow
+/*-------------------------------------------------.
+| yyexhaustedlab -- memory exhaustion comes here.  |
+`-------------------------------------------------*/
 yyexhaustedlab:
   yyerror (YY_("memory exhausted"));
   yyresult = 2;
-  goto yyreturnlab;
+  goto yyreturn;
+#endif
 
 
-/*----------------------------------------------------------.
-| yyreturnlab -- parsing is finished, clean up and return.  |
-`----------------------------------------------------------*/
-yyreturnlab:
+/*-------------------------------------------------------.
+| yyreturn -- parsing is finished, clean up and return.  |
+`-------------------------------------------------------*/
+yyreturn:
   if (yychar != YYEMPTY)
     {
       /* Make sure we have latest lookahead translation.  See comments at

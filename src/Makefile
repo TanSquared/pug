@@ -1,6 +1,6 @@
 .SUFFIXES	: .y .c .h .o .gs
 OBJECTS		= storage.o input.o static.o type.o compiler.o \
-		  parser.o pug.o
+		  parser.o pug.o completion.o
 IOBJECTS	= gofer.o builtin.o  machine.o output.o $(OBJECTS)
 COBJECTS	= gofc.o cbuiltin.o cmachine.o $(OBJECTS)
 
@@ -73,7 +73,7 @@ install		:
 
 storage.h	: pug.h
 parser.c	: parser.y input.h
-		  yacc -d parser.y
+		  bison -y -d parser.y
 		  mv y.tab.c parser.c
 		  mv y.tab.h parser.h
 
@@ -96,3 +96,4 @@ cmachine.o	: prelude.h storage.h connect.h errors.h
 builtin.o	: prelude.h storage.h connect.h errors.h prims.c
 cbuiltin.o	: prelude.h storage.h connect.h errors.h prims.c
 pug.o		: prelude.h pug.h
+completion.o   : prelude.h storage.h connect.h errors.h input.h

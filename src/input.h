@@ -17,3 +17,4 @@ extern Void goOffside	  Args((Int));
 extern Void unOffside	  Args((Void));
 extern Bool canUnOffside	  Args((Void));
 extern Int yylex 	  Args((Void));
+extern Void setup_readline_completion Args((Void));
