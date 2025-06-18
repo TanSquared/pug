@@ -134,6 +134,7 @@ static int is_filename_context(void) {
     /* Check if the current line starts with :load, :also, :edit, or :project */
     char *line = rl_line_buffer;
     
+    /* Fullform commands */
     if (strncmp(line, ":load ", 6) == 0 ||
         strncmp(line, ":also ", 6) == 0 ||
         strncmp(line, ":edit ", 6) == 0 ||
@@ -141,6 +142,14 @@ static int is_filename_context(void) {
         return 1;
     }
     
+    /* Short form commands */
+    if (strncmp(line, ":l ", 3) == 0 ||
+        strncmp(line, ":a ", 3) == 0 ||
+        strncmp(line, ":e ", 3) == 0 ||
+        strncmp(line, ":p ", 3) == 0) {
+        return 1;
+    }
+
     return 0;
 }
 
